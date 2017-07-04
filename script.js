@@ -1,5 +1,13 @@
 $(document).ready(function(){
-	newSize();
+	var s=16;
+	var k=(640/s)-2;
+	var j=s*s;
+	for(var i = 0; i < j; i++) {
+		$("#container").append('<div class="grid"></div>');
+		$(".grid").css("width", k);
+		$(".grid").css("height", k);
+	}
+	$(".grid").css("background-color","#FFF");
 	hov();
 });
 
